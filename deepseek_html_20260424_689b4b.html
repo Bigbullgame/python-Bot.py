@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <title>BIGBULL GAMES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(145deg, #f1f5ff 0%, #e8f0fe 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 20px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .card {
+      max-width: 380px;
+      width: 100%;
+      background: white;
+      border-radius: 32px;
+      padding: 36px 28px 30px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profile-wrap {
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-pic {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #eef2ff;
+      box-shadow: 0 0 0 3px white, 0 0 0 5px rgba(59,130,246,0.2);
+    }
+
+    .badge {
+      position: absolute;
+      bottom: 4px;
+      right: 2px;
+      background: #3b82f6;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid white;
+    }
+
+    .badge svg {
+      width: 13px;
+      height: 13px;
+      fill: white;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: #0b1e3c;
+      margin: 18px 0 4px;
+      letter-spacing: -0.3px;
+    }
+
+    .sub {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #4b5568;
+      margin-bottom: 10px;
+    }
+
+    .members {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #2563eb;
+      background: #f0f4ff;
+      display: inline-block;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .trust {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 22px;
+      color: #1e293b;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .trust span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .urgent {
+      color: #b45309;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 100%;
+      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+      border: none;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      padding: 16px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(59,130,246,0.3);
+      transition: 0.2s;
+      animation: glow 2.2s infinite;
+      letter-spacing: 0.4px;
+      margin-bottom: 10px;
+    }
+
+    button:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 26px rgba(59,130,246,0.45);
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    @keyframes glow {
+      0%, 100% { box-shadow: 0 8px 20px rgba(59,130,246,0.3); }
+      50% { box-shadow: 0 8px 28px rgba(139,92,246,0.55); }
+    }
+
+    .tap-hint {
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-bottom: 16px;
+    }
+
+    .footer {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="profile-wrap">
+      <img class="profile-pic" src="bigbull.jpg" alt="BIGBULL" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2296%22 height=%2296%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%23eef2ff%22/%3E%3Ctext x=%2250%25%22 y=%2255%25%22 text-anchor=%22middle%22 dy=%22.3em%22 font-size=%2240%22%3E🐂%3C/text%3E%3C/svg%3E';">
+      <div class="badge">
+        <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+      </div>
+    </div>
+
+    <h1>BIGBULL GAMES</h1>
+    <div class="sub">Join for more information</div>
+    <div class="members">78,000+ active members</div>
+
+    <div class="trust">
+      <span>✔️ Daily updates & real-time support</span>
+      <span>✔️ 100% transparent process</span>
+      <span>✔️ Trusted by thousands of users</span>
+    </div>
+
+    <div class="urgent">⏳ Limited access – only for serious users</div>
+
+    <button id="ctaBtn">SEND DM</button>
+    <div class="tap-hint">Tap to connect instantly on Telegram</div>
+
+    <div class="footer">
+      <span>Privacy</span>
+      <span>Terms</span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('ctaBtn').addEventListener('click', function() {
+      window.open('https://t.me/globalnetwork_01', '_blank', 'noopener,noreferrer');
+    });
+  </script>
+</body>
+</html>
